@@ -1,10 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-export interface todoState {
+interface todoState {
   day: string[];
   month: string[];
   year: string[];
+}
+
+interface ITodoState {
+  local: { todo: todoState };
 }
 
 const initialState: todoState = {
@@ -32,5 +36,7 @@ export const todoSlice = createSlice({
 });
 
 export const { dayTodo, monthTodo, yearTodo } = todoSlice.actions;
+
+export const TodoArray = (state: ITodoState) => state.local.todo;
 
 export default todoSlice;
