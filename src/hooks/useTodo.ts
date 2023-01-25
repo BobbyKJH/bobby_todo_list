@@ -11,7 +11,7 @@ const useTodo = () => {
     [todo]
   );
 
-  return { todo, onChangeTodo };
+  return { todo, setTodo, onChangeTodo };
 };
 
 export default useTodo;
