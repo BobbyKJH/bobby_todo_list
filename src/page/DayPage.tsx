@@ -11,11 +11,12 @@ const DayPage = () => {
   const dispatch = useDispatch();
 
   const { day } = useSelector(TodoArray);
-  const { todo, onChangeTodo } = useTodo();
+  const { todo, setTodo, onChangeTodo } = useTodo();
 
   const dayListAdd = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     dispatch(dayTodo([todo, ...day]));
+    setTodo("");
   };
 
   return (
