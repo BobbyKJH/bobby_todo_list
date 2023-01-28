@@ -1,7 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import TodoList from "../components/common/TodoList";
-import useTodo from "../hooks/useTodo";
 import { dayTodo, TodoArray } from "../store/slice/todoSlice";
+
+import useTodo from "../hooks/useTodo";
+
+import TodoList from "../components/common/TodoList";
 
 interface todo {
   f: string[];
